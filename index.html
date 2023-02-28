@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA-CALCULO</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Calculadora de Pagamento</h1>  
+        
+        <a href="https://mercadocotacao.com/dolar-hoje/" id="USD" title="Dólar"                 name="mercado_cotacao">Dólar</a><script async       src="https://mercadocotacao.com/money/mercadocotacao.js"></script>
+
+        
+        <a href="https://mercadocotacao.com/dolar-turismo-compra/" id="USDTC" title="Dólar Turismo Compra" name="mercado_cotacao">Dólar Turismo Compra</a><script async src="https://mercadocotacao.com/money/mercadocotacao.js"></script>
+
+        
+        <a href="https://mercadocotacao.com/dolar-turismo-venda-hoje/" id="USDTV" title="Dólar Turismo Venda" name="mercado_cotacao">Dólar Turismo Venda</a><script async src="https://mercadocotacao.com/money/mercadocotacao.js"></script>
+
+        
+        <a href="https://mercadocotacao.com/euro-hoje/" id="EUR" title="Euro" name="mercado_cotacao">Euro</a><script async src="https://mercadocotacao.com/money/mercadocotacao.js"></script>
+
+
+
+
+		<div class="form">
+			<label for="valor">Valor da Tarifa em [USD$]:</label>
+			<input type="number" id="valor" placeholder="Digite o valor da compra">
+			<label for="pagamento">Forma de Pagamento:</label>
+			<select id="pagamento">
+				<option value="avista">À Vista / Pix</option>
+				<option value="cartao1">Cartão de Crédito - 1 a 6x</option>
+				<option value="cartao2">Cartão de Crédito - 7 a 12x</option>
+			</select>
+			<label for="fee">FEE [USD$]:</label>
+			<input type="number" id="fee" placeholder="Digite o valor do FEE">
+			<label for="taxa">Taxa de Embarque [USD$]:</label>
+			<input type="number" id="taxa" placeholder="Digite o valor da taxa de embarque">
+			<button id="calc" onclick="calcular()">C a l c u l a r</button>
+			<div class="resultado">
+				<h3>Valor Total do Bilhete em [USD$]:</h3>
+				<p id="valorTotal"></p>
+				<h3>Valor Total em [R$] :</h3>
+				<p id="valorDolar"></p>
+                
+            
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
